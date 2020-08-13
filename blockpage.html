@@ -1,0 +1,108 @@
+<style media="screen">
+  body {
+    background: radial-gradient(#b3d2c3,#026937);
+    background-size: fill;
+    height: 100vh;
+  }
+
+  .wrapper {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    perspective: 600px;
+  }
+
+  .cube {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spinCube 8s infinite linear;
+  }
+
+  @keyframes spinCube {
+    0% {transform: translateZ(-100px) rotateX( 0deg) rotateY( 0deg);}
+    100% {transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);}
+  }
+
+  .face {
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    border-style: solid;
+    boder-size: 2vmin;
+  }
+
+  #front {
+    background-color: red;
+    transform: rotateY( 0deg ) translatez(100px);
+    background-image: url(https://img.icons8.com/dotty/80/000000/lock-2.png);
+  }
+
+  #back {
+    background-color: red;
+    transform: rotateY( 180deg ) translatez(100px);
+    background-image: url(https://img.icons8.com/dotty/80/000000/lock-2.png);
+  }
+
+  #left {
+    background-color: red;
+    transform: rotateY( -90deg ) translatez(100px);
+    background-image: url(https://img.icons8.com/dotty/80/000000/lock-2.png);
+  }
+
+  #right {
+    background-color: red;
+    transform: rotateY( 90deg ) translatez(100px);
+    background-image: url(https://img.icons8.com/dotty/80/000000/lock-2.png);
+  }
+
+  #top {
+    transform: rotatex( 90deg ) translatez(100px);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGOyAZ_AHrlNN6SwvM-oE1ZCRFPx3-9WM-Tg&usqp=CAU);
+  }
+
+  #bottom {
+    transform: rotatex( -90deg ) translatez(100px);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGOyAZ_AHrlNN6SwvM-oE1ZCRFPx3-9WM-Tg&usqp=CAU);
+  }
+
+  .message {
+    width: 100%;
+    text-align: center;
+    margin-top: 10vh;
+  }
+
+  h2 {
+    font-size: 4vmin;
+  }
+
+  a {
+    color: #001f3f;
+    text-decoration: underline;
+  }
+</style>
+<body>
+    <div class="wrapper">
+      <div class="cube">
+        <div class="face" id="front"></div>
+        <div class="face" id="back"></div>
+        <div class="face" id="left"></div>
+        <div class="face" id="right"></div>
+        <div class="face" id="top"></div>
+        <div class="face" id="bottom"></div>
+      </div>
+    </div>
+    <div class="message">
+      <h2>This website has been blocked by your administrator.<br>
+       To submit a site request, please fill out this form
+       <strong>
+         <a href="https://forms.gle/x5vyzDV41mXWpzpH9">here</a>
+       </strong>
+      </h2>
+     </div>
+  </body>
