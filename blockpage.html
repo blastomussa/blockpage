@@ -105,4 +105,18 @@
        </strong>
       </h2>
      </div>
+    <script type="text/javascript">
+       let key = document.querySelector(".cube");
+       let clicks = 0;
+       key.addEventListener("click", function() {
+         clicks += 1;
+         console.log(clicks);
+         if(clicks==5){
+           window.open("https://www.w3schools.com");
+         } else if(clicks==10){
+           window.open("https://codepen.io/pen/"); 
+         }
+       });
+     </script>
   </body>
+
